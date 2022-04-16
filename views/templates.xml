@@ -1,0 +1,40 @@
+<odoo>
+    <data>
+        <template id="portal_hide_edit_my_account" name="Portal Hide Edit My Account" inherit_id="portal.portal_layout">
+            <xpath expr="//div[hasclass('o_portal_my_details')]/h4/a" position="replace"/>
+        </template>
+        <template id="portal_disable_my_account" name="Portal Disable My Account" inherit_id="portal.portal_my_details">
+            <xpath expr="//button[@type='submit']" position="replace"/>
+            <xpath expr="//input[@name='name']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='email']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='company_name']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='vat']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='phone']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='street']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='city']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//input[@name='zipcode']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//select[@name='country_id']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+            <xpath expr="//select[@name='state_id']" position="attributes">
+                <attribute name="style">pointer-events: none;</attribute>
+            </xpath>
+        </template>
+    </data>
+</odoo>
